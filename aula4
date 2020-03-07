@@ -1,0 +1,48 @@
+'''                                     AULA 4                                '''
+
+
+def ordena_tres_numeros(valor1, valor2, valor3):
+    if valor1 > valor2:
+        valor1, valor2 = valor2, valor1
+    if valor2 > valor3:
+        valor2, valor3 = valor3, valor2
+    if valor1 > valor2:
+        valor1, valor2 = valor2, valor1
+    print(valor1, valor2, valor3)
+
+def decompoe_numero(valor):
+    print(valor % 10)   #o % me retorna o resto da divisão
+    print((valor // 10) % 10)    #o // me retorna a parte inteira da divisão
+    print((valor // 100) % 10)
+
+def e_multiplo(valor, divisor):
+    if valor % divisor == 0:
+        print ('É múltiplo de', divisor)
+    else:
+        print('Não é múltipli de', divisor)
+
+def informa_pares():
+    for i in range(3):
+        valor = int(input('Insira um número. \n'))
+        e_multiplo(valor, 2)
+
+def informa_maior():
+    maximo = 0
+    for i in range(3):
+        valor = int(input("Insira um número.\n"))
+        if valor > maximo:
+            maximo = valor
+    print('O maior valor inserido é', maximo)
+
+def informa_maior_alt():
+    numeros = []
+    for i in range(3):
+        numeros.append(int(input('Informe um valor.\n')))
+    print(max(numeros))
+
+def main():
+    informa_maior_alt()
+
+
+main()
+
